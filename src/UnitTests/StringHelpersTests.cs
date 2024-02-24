@@ -25,7 +25,7 @@ namespace UnitTests
             "000102030405060708090a0b0c0d0e0f102132435465768798a9bacbdcedfeffeeddccbbaa99887766554433221100ff";
 
         /// <summary>
-        /// Unit test for <see cref="StringHelpers.ArrayToHex"/> with default lower casing.
+        /// Unit test for <see cref="StringHelpers.ArrayToHex(byte[], bool)"/> with default lower casing.
         /// </summary>
         [Fact]
         public void ArrayToHexTest()
@@ -35,7 +35,7 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Unit test for <see cref="StringHelpers.HexToArray"/> with default lower casing.
+        /// Unit test for <see cref="StringHelpers.HexToArray(string)"/> with default lower casing.
         /// </summary>
         [Fact]
         public void HexToArrayTest()
@@ -45,7 +45,7 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Unit test for <see cref="StringHelpers.ArrayToHex"/> with upper casing.
+        /// Unit test for <see cref="StringHelpers.ArrayToHex(byte[], bool)"/> with upper casing.
         /// </summary>
         [Fact]
         public void ArrayToHexUpperCaseTest()
@@ -55,7 +55,7 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Unit test for <see cref="StringHelpers.HexToArray"/> with upper casing.
+        /// Unit test for <see cref="StringHelpers.HexToArray(string)"/> with upper casing.
         /// </summary>
         [Fact]
         public void HexToArrayUpperCaseTest()
