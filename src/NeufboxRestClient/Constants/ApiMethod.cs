@@ -6,205 +6,538 @@
     public static class ApiMethod
     {
         /// <summary>
-        /// getToken method, part of authentication module.
+        /// The authentication module.
         /// </summary>
-        public const string AuthGetToken = ApiModule.Auth + ".getToken";
+        public static class Auth
+        {
+            /// <summary>
+            /// getToken method.
+            /// </summary>
+            public const string GetToken = "auth.getToken";
+
+            /// <summary>
+            /// checkToken method.
+            /// </summary>
+            public const string CheckToken = "auth.checkToken";
+        }
 
         /// <summary>
-        /// checkToken method, part of authentication module.
+        /// The backup3g module.
         /// </summary>
-        public const string AuthCheckToken = ApiModule.Auth + ".checkToken";
+        public static class Backup3g
+        {
+            /// <summary>
+            /// forceDataLink method.
+            /// </summary>
+            public const string ForceDataLink = "backup3g.forceDataLink";
+
+            /// <summary>
+            /// forceVoipLink method.
+            /// </summary>
+            public const string ForceVoipLink = "backup3g.forceVoipLink";
+
+            /// <summary>
+            /// getPinCode method.
+            /// </summary>
+            public const string GetPinCode = "backup3g.getPinCode";
+
+            /// <summary>
+            /// setPinCode method.
+            /// </summary>
+            public const string SetPinCode = "backup3g.setPinCode";
+        }
 
         /// <summary>
-        /// Not Implemented (Yet)
-        /// 
-        /// backup3g.forceDataLink
-        /// backup3g.forceVoipLink
-        /// backup3g.getPinCode
-        /// backup3g.setPinCode
-        /// ddns.disable
-        /// ddns.enable
-        /// ddns.forceUpdate
-        /// ddns.getInfo
-        /// ddns.setService
-        /// dsl.getInfo
-        /// ftth.getInfo
-        /// firewall.enableSmtpFilter
-        /// firewall.disableSmtpFilter
-        /// firewall.getInfo
-        /// hotspot.enable
-        /// hotspot.disable
-        /// hotspot.getClientList
-        /// hotspot.getInfo
-        /// hotspot.setMode
-        /// hotspot.restart
-        /// hotspot.start
-        /// hotspot.stop
-        /// lan.addDnsHost
-        /// lan.deleteDnsHost
-        /// lan.getDnsHostList
-        /// lan.getHostsList
-        /// lan.getInfo
-        /// ont.getInfo
-        /// ont.sync
-        /// ont.push
-        /// ont.pull
-        /// p910nd.getInfo
-        /// ppp.getCredentials
-        /// ppp.getInfo
-        /// ppp.setCredentials
-        /// smb.getInfo
-        /// system.getInfo
-        /// system.getIfList
-        /// system.getWpaKey
-        /// system.reboot
-        /// system.setNetMode
-        /// system.setRefClient
-        /// tv.getInfo
-        /// usb.getInfo
-        /// voip.getCallhistoryList
-        /// voip.getInfo
-        /// voip.restart
-        /// voip.start
-        /// voip.stop
-        /// wan.getInfo
-        /// wlan.enable
-        /// wlan.disable
-        /// wlan.getClientList
-        /// wlan.getInfo
-        /// wlan.getScanList
-        /// wlan.setChannel
-        /// wlan.setWl0Enc
-        /// wlan.setWl0Enctype
-        /// wlan.setWl0Keytype
-        /// wlan.setWl0Ssid
-        /// wlan.setWl0Wepkey
-        /// wlan.setWl0Wpakey
-        /// wlan.setWlanMode
-        /// wlan.start
-        /// wlan.stop
-        /// wlan.restart
-        /// wlan5.getClientList
-        /// wlan5.getInfo
-        /// wlan5.setChannel
-        /// wlan5.setWl0Enc
-        /// wlan5.setWl0Enctype
-        /// wlan5.setWl0Keytype
-        /// wlan5.setWl0Ssid
-        /// wlan5.setWl0Wepkey
-        /// wlan5.setWl0Wpakey
-        /// wlan5.setWlanMode
-        /// guest.getInfo
-        /// guest.enable
-        /// guest.disable
-        /// guest.setSsid
-        /// guest.setWpakey
+        /// The ddns module.
         /// </summary>
-    }
+        public static class DDNS
+        {
+            /// <summary>
+            /// disable method.
+            /// </summary>
+            public const string Disable = "ddns.disable";
 
-    /// <summary>
-    /// API modules.
-    /// </summary>
-    public static class ApiModule
-    {
-        /// <summary>
-        /// The authentication domain.
-        /// </summary>
-        public const string Auth = "auth";
+            /// <summary>
+            /// enable method.
+            /// </summary>
+            public const string Enable = "ddns.enable";
+
+            /// <summary>
+            /// forceUpdate method.
+            /// </summary>
+            public const string ForceUpdate = "ddns.forceUpdate";
+
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "ddns.getInfo";
+
+            /// <summary>
+            /// setService method.
+            /// </summary>
+            public const string SetService = "ddns.setService";
+        }
 
         /// <summary>
-        /// The backup3g domain.
+        /// The dsl module.
         /// </summary>
-        public const string Backup3g = "backup3g";
+        public static class DSL
+        {
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "dsl.getInfo";
+        }
 
         /// <summary>
-        /// The ddns domain.
+        /// The ftth module.
         /// </summary>
-        public const string DDNS = "ddns";
+        public static class FTTH
+        {
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "ftth.getInfo";
+        }
 
         /// <summary>
-        /// The dsl domain.
+        /// The firewall module.
         /// </summary>
-        public const string DSL = "dsl";
+        public static class Firewall
+        {
+            /// <summary>
+            /// enableSmtpFilter method.
+            /// </summary>
+            public const string EnableSmtpFilter = "firewall.enableSmtpFilter";
+
+            /// <summary>
+            /// disableSmtpFilter method.
+            /// </summary>
+            public const string DisableSmtpFilter = "firewall.disableSmtpFilter";
+
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "firewall.getInfo";
+        }
 
         /// <summary>
-        /// The ftth domain.
+        /// The hotspot module.
         /// </summary>
-        public const string FTTH = "ftth";
+        public static class Hotspot
+        {
+            /// <summary>
+            /// enable method.
+            /// </summary>
+            public const string Enable = "hotspot.enable";
+
+            /// <summary>
+            /// disable method.
+            /// </summary>
+            public const string Disable = "hotspot.disable";
+
+            /// <summary>
+            /// getClientList method.
+            /// </summary>
+            public const string GetClientList = "hotspot.getClientList";
+
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "hotspot.getInfo";
+
+            /// <summary>
+            /// setMode method.
+            /// </summary>
+            public const string SetMode = "hotspot.setMode";
+
+            /// <summary>
+            /// restart method.
+            /// </summary>
+            public const string Restart = "hotspot.restart";
+
+            /// <summary>
+            /// start method.
+            /// </summary>
+            public const string Start = "hotspot.start";
+
+            /// <summary>
+            /// stop method.
+            /// </summary>
+            public const string Stop = "hotspot.stop";
+        }
 
         /// <summary>
-        /// The firewall domain.
+        /// The lan module.
         /// </summary>
-        public const string Firewall = "firewall";
+        public static class LAN
+        {
+            /// <summary>
+            /// addDnsHost method.
+            /// </summary>
+            public const string AddDnsHost = "lan.addDnsHost";
+
+            /// <summary>
+            /// deleteDnsHost method.
+            /// </summary>
+            public const string DeleteDnsHost = "lan.deleteDnsHost";
+
+            /// <summary>
+            /// getDnsHostList method.
+            /// </summary>
+            public const string GetDnsHostList = "lan.getDnsHostList";
+
+            /// <summary>
+            /// getHostsList method.
+            /// </summary>
+            public const string GetHostsList = "lan.getHostsList";
+
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "lan.getInfo";
+        }
 
         /// <summary>
-        /// The hotspot domain.
+        /// The ont module.
         /// </summary>
-        public const string Hotspot = "hotspot";
+        public static class ONT
+        {
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "ont.getInfo";
+
+            /// <summary>
+            /// sync method.
+            /// </summary>
+            public const string Sync = "ont.sync";
+
+            /// <summary>
+            /// push method.
+            /// </summary>
+            public const string Push = "ont.push";
+
+            /// <summary>
+            /// pull method.
+            /// </summary>
+            public const string Pull = "ont.pull";
+        }
 
         /// <summary>
-        /// The lan domain.
+        /// The p910nd module.
         /// </summary>
-        public const string LAN = "lan";
+        public static class P910ND
+        {
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "p910nd.getInfo";
+        }
 
         /// <summary>
-        /// The ont domain.
+        /// The ppp module.
         /// </summary>
-        public const string ONT = "ont";
+        public static class PPP
+        {
+            /// <summary>
+            /// getCredentials method.
+            /// </summary>
+            public const string GetCredentials = "ppp.getCredentials";
+
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "ppp.getInfo";
+
+            /// <summary>
+            /// setCredentials method.
+            /// </summary>
+            public const string SetCredentials = "ppp.setCredentials";
+        }
 
         /// <summary>
-        /// The p910nd domain.
+        /// The smb module.
         /// </summary>
-        public const string P910ND = "p910nd";
+        public static class SMB
+        {
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "smb.getInfo";
+        }
 
         /// <summary>
-        /// The ppp domain.
+        /// The system module.
         /// </summary>
-        public const string PPP = "ppp";
+        public static class System
+        {
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "system.getInfo";
+
+            /// <summary>
+            /// getIfList method.
+            /// </summary>
+            public const string GetIfList = "system.getIfList";
+
+            /// <summary>
+            /// getWpaKey method.
+            /// </summary>
+            public const string GetWpaKey = "system.getWpaKey";
+
+            /// <summary>
+            /// reboot method.
+            /// </summary>
+            public const string Reboot = "system.reboot";
+
+            /// <summary>
+            /// setNetMode method.
+            /// </summary>
+            public const string SetNetMode = "system.setNetMode";
+
+            /// <summary>
+            /// setRefClient method.
+            /// </summary>
+            public const string SetRefClient = "system.setRefClient";
+        }
 
         /// <summary>
-        /// The smb domain.
+        /// The tv module.
         /// </summary>
-        public const string SMB = "smb";
+        public static class TV
+        {
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "tv.getInfo";
+        }
 
         /// <summary>
-        /// The system domain.
+        /// The usb module.
         /// </summary>
-        public const string System = "system";
+        public static class USB
+        {
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string getInfo = "usb.getInfo";
+        }
 
         /// <summary>
-        /// The tv domain.
+        /// The voip module.
         /// </summary>
-        public const string TV = "tv";
+        public static class VOIP
+        {
+            /// <summary>
+            /// getCallhistoryList method.
+            /// </summary>
+            public const string GetCallhistoryList = "voip.getCallhistoryList";
+
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "voip.getInfo";
+
+            /// <summary>
+            /// restart method.
+            /// </summary>
+            public const string Restart = "voip.restart";
+
+            /// <summary>
+            /// start method.
+            /// </summary>
+            public const string Start = "voip.start";
+
+            /// <summary>
+            /// stop method.
+            /// </summary>
+            public const string Stop = "voip.stop";
+        }
 
         /// <summary>
-        /// The usb domain.
+        /// The wan module.
         /// </summary>
-        public const string USB = "usb";
+        public static class WAN
+        {
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "wan.getInfo";
+        }
 
         /// <summary>
-        /// The voip domain.
+        /// The wlan module.
         /// </summary>
-        public const string VOIP = "voip";
+        public static class WLAN
+        {
+            /// <summary>
+            /// enable method.
+            /// </summary>
+            public const string Enable = "wlan.enable";
+
+            /// <summary>
+            /// disable method.
+            /// </summary>
+            public const string Disable = "wlan.disable";
+
+            /// <summary>
+            /// getClientList method.
+            /// </summary>
+            public const string GetClientList = "wlan.getClientList";
+
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "wlan.getInfo";
+
+            /// <summary>
+            /// getScanList method.
+            /// </summary>
+            public const string GetScanList = "wlan.getScanList";
+
+            /// <summary>
+            /// setChannel method.
+            /// </summary>
+            public const string SetChannel = "wlan.setChannel";
+
+            /// <summary>
+            /// setWl0Enc method.
+            /// </summary>
+            public const string SetWl0Enc = "wlan.setWl0Enc";
+
+            /// <summary>
+            /// setWl0Enctype method.
+            /// </summary>
+            public const string SetWl0Enctype = "wlan.setWl0Enctype";
+
+            /// <summary>
+            /// setWl0Keytype method.
+            /// </summary>
+            public const string SetWl0Keytype = "wlan.setWl0Keytype";
+
+            /// <summary>
+            /// setWl0Ssid method.
+            /// </summary>
+            public const string SetWl0Ssid = "wlan.setWl0Ssid";
+
+            /// <summary>
+            /// setWl0Wepkey method.
+            /// </summary>
+            public const string SetWl0Wepkey = "wlan.setWl0Wepkey";
+
+            /// <summary>
+            /// setWl0Wpakey method.
+            /// </summary>
+            public const string SetWl0Wpakey = "wlan.setWl0Wpakey";
+
+            /// <summary>
+            /// setWlanMode method.
+            /// </summary>
+            public const string SetWlanMode = "wlan.setWlanMode";
+
+            /// <summary>
+            /// start method.
+            /// </summary>
+            public const string Start = "wlan.start";
+
+            /// <summary>
+            /// stop method.
+            /// </summary>
+            public const string Stop = "wlan.stop";
+
+            /// <summary>
+            /// restart method.
+            /// </summary>
+            public const string Sestart = "wlan.restart";
+        }
 
         /// <summary>
-        /// The wan domain.
+        /// The wlan5 module.
         /// </summary>
-        public const string WAN = "wan";
+        public static class WLAN5
+        {
+            /// <summary>
+            /// getClientList method.
+            /// </summary>
+            public const string GetClientList = "wlan5.getClientList";
+
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "wlan5.getInfo";
+
+            /// <summary>
+            /// setChannel method.
+            /// </summary>
+            public const string SetChannel = "wlan5.setChannel";
+
+            /// <summary>
+            /// setWl0Enc method.
+            /// </summary>
+            public const string SetWl0Enc = "wlan5.setWl0Enc";
+
+            /// <summary>
+            /// setWl0Enctype method.
+            /// </summary>
+            public const string SetWl0Enctype = "wlan5.setWl0Enctype";
+
+            /// <summary>
+            /// setWl0Keytype method.
+            /// </summary>
+            public const string SetWl0Keytype = "wlan5.setWl0Keytype";
+
+            /// <summary>
+            /// setWl0Ssid method.
+            /// </summary>
+            public const string SetWl0Ssid = "wlan5.setWl0Ssid";
+
+            /// <summary>
+            /// setWl0Wepkey method.
+            /// </summary>
+            public const string SetWl0Wepkey = "wlan5.setWl0Wepkey";
+
+            /// <summary>
+            /// setWl0Wpakey method.
+            /// </summary>
+            public const string SetWl0Wpakey = "wlan5.setWl0Wpakey";
+
+            /// <summary>
+            /// setWlanMode method.
+            /// </summary>
+            public const string SetWlanMode = "wlan5.setWlanMode";
+        }
 
         /// <summary>
-        /// The wlan domain.
+        /// The guest module.
         /// </summary>
-        public const string WLAN = "wlan";
+        public static class Guest
+        {
+            /// <summary>
+            /// getInfo method.
+            /// </summary>
+            public const string GetInfo = "guest.getInfo";
 
-        /// <summary>
-        /// The wlan5 domain.
-        /// </summary>
-        public const string WLAN5 = "wlan5";
+            /// <summary>
+            /// enable method.
+            /// </summary>
+            public const string Enable = "guest.enable";
 
-        /// <summary>
-        /// The guest domain.
-        /// </summary>
-        public const string Guest = "guest";
+            /// <summary>
+            /// disable method.
+            /// </summary>
+            public const string Disable = "guest.disable";
+
+            /// <summary>
+            /// setSsid method.
+            /// </summary>
+            public const string SetSsid = "guest.setSsid";
+
+            /// <summary>
+            /// setWpakey method.
+            /// </summary>
+            public const string SetWpakey = "guest.setWpakey";
+        }
     }
 }
