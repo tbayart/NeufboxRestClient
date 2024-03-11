@@ -1,4 +1,6 @@
-﻿using System.Xml.Serialization;
+﻿using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Serialization;
 
 namespace NeufboxRestClient.Models
 {
@@ -19,5 +21,11 @@ namespace NeufboxRestClient.Models
         /// </summary>
         [XmlAttribute("version")]
         public string Version { get; set; }
+
+        /// <summary>
+        /// The API call result.
+        /// </summary>
+        [XmlAnyElement]
+        public XmlElement Result { get; set; }
     }
 }
