@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 namespace NeufboxRestClient
 {
     /// <summary>
-    /// Implementation of <see cref="ApiResponse"/> deserialization from XML data.
+    /// API response deserialization from XML data.
     /// </summary>
     public class ApiResponseDeserializerXml : IApiResponseDeserializer
     {

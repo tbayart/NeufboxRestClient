@@ -2,6 +2,9 @@
 
 namespace NeufboxRestClient.Interfaces
 {
+    /// <summary>
+    /// API response deserialization definition.
+    /// </summary>
     public interface IApiResponseDeserializer
     {
         /// <summary>
