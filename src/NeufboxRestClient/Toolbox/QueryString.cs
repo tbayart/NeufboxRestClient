@@ -67,8 +67,8 @@ namespace Toolbox
         /// </summary>
         /// <param name="name">The parameter's name. This value cannot be null or empty.</param>
         /// <param name="value">The parameter value.</param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException">The </exception>
+        /// <returns>The current instance to allow chaining calls.</returns>
+        /// <exception cref="ArgumentNullException">The <paramref name="name"/> is mandatory and cannot be null.</exception>
         public QueryString Add(string name, string value)
         {
             if (string.IsNullOrEmpty(name))
@@ -85,6 +85,10 @@ namespace Toolbox
             return this;
         }
 
+        /// <summary>
+        /// Clear the query string.
+        /// </summary>
+        /// <returns>The current instance to allow chaining calls.</returns>
         public QueryString Clear()
         {
             prefix = prefixRoot;
