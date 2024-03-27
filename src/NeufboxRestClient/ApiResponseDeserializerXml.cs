@@ -32,7 +32,7 @@ namespace NeufboxRestClient
         /// </summary>
         /// <typeparam name="T">The result type in the response.</typeparam>
         /// <param name="apiResponseXml">The xml response from the API.</param>
-        /// <returns></returns>
+        /// <returns>A <see cref="ApiResult{T}"/> instance.</returns>
         public ApiResult<T> Deserialize<T>(string apiResponseXml)
         {
             var apiResponse = DeserializeObject<ApiResponse>(apiResponseXml);
