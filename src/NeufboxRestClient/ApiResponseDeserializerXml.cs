@@ -1,5 +1,6 @@
 ﻿using NeufboxRestClient.Interfaces;
-using NeufboxRestClient.Models;
+using NeufboxRestClient.Internal;
+using NeufboxRestClient.Internal.Models;
 using System.Xml.Serialization;
 
 namespace NeufboxRestClient

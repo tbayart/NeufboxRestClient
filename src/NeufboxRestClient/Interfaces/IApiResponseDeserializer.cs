@@ -1,4 +1,4 @@
-﻿using NeufboxRestClient.Models;
+﻿using NeufboxRestClient.Internal.Models;
 
 namespace NeufboxRestClient.Interfaces
 {

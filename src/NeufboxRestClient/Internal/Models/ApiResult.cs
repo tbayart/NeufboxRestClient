@@ -1,4 +1,4 @@
-﻿namespace NeufboxRestClient.Models
+﻿namespace NeufboxRestClient.Internal.Models
 {
     /// <summary>
     /// Model used to deserialize data embedded in the <see cref="ApiResponse"/>.

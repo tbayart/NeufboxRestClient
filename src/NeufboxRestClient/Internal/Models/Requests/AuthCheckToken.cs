@@ -1,6 +1,6 @@
 ﻿using NeufboxRestClient.Constants;
 
-namespace NeufboxRestClient.Models.Requests
+namespace NeufboxRestClient.Internal.Models.Requests
 {
     /// <summary>
     /// auth.checkToken request.

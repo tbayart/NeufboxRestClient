@@ -1,4 +1,4 @@
-﻿namespace NeufboxRestClient.Models
+﻿namespace NeufboxRestClient.Internal
 {
     /// <summary>
     /// Attribute used to describe a API request.

@@ -1,5 +1,5 @@
 ﻿using NeufboxRestClient.Interfaces;
-using NeufboxRestClient.Models;
+using NeufboxRestClient.Internal;
 using System.Reflection;
 using Toolbox;
 

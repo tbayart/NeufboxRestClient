@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace NeufboxRestClient.Models.Responses
+namespace NeufboxRestClient.Internal.Models.Responses
 {
     /// <summary>
     /// Response to <see cref="Requests.AuthCheckToken"/>.

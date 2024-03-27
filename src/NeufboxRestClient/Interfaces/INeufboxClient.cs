@@ -5,7 +5,7 @@ namespace NeufboxRestClient.Interfaces
     /// <summary>
     /// Neufbox client API interface.
     /// </summary>
-    public interface INeufboxClient : INeufboxClientPublic, INeufboxClientPrivate
+    public interface INeufboxClient
     {
         /// <summary>
         /// Login API to authenticate the client and allow access to private APIs.
@@ -13,21 +13,11 @@ namespace NeufboxRestClient.Interfaces
         /// <param name="username">The username.</param>
         /// <param name="password">The password.</param>
         /// <returns>A task instance to provide the asynchronous Login result.</returns>
-        Task<ApiResult> LoginAsync(string username, string password);
-    }
+        Task<LoginResult> LoginAsync(string username, string password);
 
-    /// <summary>
-    /// Neufbox client interface with public APIs accessible without authentication.
-    /// </summary>
-    public interface INeufboxClientPublic
-    {
-    }
-
-    /// <summary>
-    /// Neufbox client interface with private APIs requiring authentication.
-    /// </summary>
-    public interface INeufboxClientPrivate
-    {
-
+        /// <summary>
+        /// Access to System module methods.
+        /// </summary>
+        INeufboxModuleSystem System { get; }
     }
 }

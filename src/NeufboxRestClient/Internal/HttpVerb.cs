@@ -1,4 +1,4 @@
-﻿namespace NeufboxRestClient.Models
+﻿namespace NeufboxRestClient.Internal
 {
     /// <summary>
     /// List of know http verbs.

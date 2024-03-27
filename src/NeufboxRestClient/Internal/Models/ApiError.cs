@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace NeufboxRestClient.Models
+namespace NeufboxRestClient.Internal.Models
 {
     /// <summary>
     /// Model used to deserialize API response when an error is returned.
