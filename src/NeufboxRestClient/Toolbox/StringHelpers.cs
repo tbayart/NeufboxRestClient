@@ -9,17 +9,18 @@
         /// <summary>
         /// Used to convert a numeric value to its lower case character representation.
         /// </summary>
-        private static readonly string hexTableLowerCase = "0123456789abcdef";
+        private const string hexTableLowerCase = "0123456789abcdef";
 
         /// <summary>
         /// Used to convert a numeric value to its upper case character representation.
         /// </summary>
-        private static readonly string hexTableUpperCase = "0123456789ABCDEF";
+        private const string hexTableUpperCase = "0123456789ABCDEF";
 
         /// <summary>
         /// Used to convert a character to its numeric value.
         /// </summary>
-        private static readonly Dictionary<char, byte> charToByte = new Dictionary<char, byte> {
+        private static readonly Dictionary<char, byte> charToByte = new()
+        {
             {'0', 0x00 }, {'1', 0x01 }, {'2', 0x02 }, {'3', 0x03 },
             {'4', 0x04 }, {'5', 0x05 }, {'6', 0x06 }, {'7', 0x07 },
             {'8', 0x08 }, {'9', 0x09 }, {'a', 0x0a }, {'b', 0x0b },
