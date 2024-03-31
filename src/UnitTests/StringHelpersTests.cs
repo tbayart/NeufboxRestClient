@@ -21,7 +21,7 @@ namespace UnitTests
         /// <summary>
         /// String representation of previous byte array.
         /// </summary>
-        public static string expectedResultHexString =
+        public const string expectedResultHexString =
             "000102030405060708090a0b0c0d0e0f102132435465768798a9bacbdcedfeffeeddccbbaa99887766554433221100ff";
 
         /// <summary>
