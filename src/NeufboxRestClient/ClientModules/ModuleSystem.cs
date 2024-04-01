@@ -50,9 +50,13 @@ namespace NeufboxRestClient
         /// </summary>
         /// <exception cref="UnauthorizedException">The Login was not done before calling the method.</exception>
         /// <returns>The WPA key.</returns>
-        public Task<string> GetWpaKeyAsync()
+        public async Task<string> GetWpaKeyAsync()
         {
-            throw new NotImplementedException();
+            var response = await SendRequestAsync<SystemGetWpaKey, Internal.Models.Responses.SystemGetWpaKey>(new SystemGetWpaKey());
+            if (response.IsSuccess == false)
+                return null;
+
+            return response.Data.WpaKey;
         }
 
         /// <summary>
