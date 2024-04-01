@@ -17,7 +17,7 @@ namespace NeufboxRestClient.Internal.Models
         /// <summary>
         /// The error message.
         /// </summary>
-        [XmlAttribute("message")]
+        [XmlAttribute("msg")]
         public string Message { get; set; }
     }
 }
