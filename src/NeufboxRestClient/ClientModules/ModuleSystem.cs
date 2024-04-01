@@ -75,10 +75,12 @@ namespace NeufboxRestClient
         /// <summary>
         /// Change the network mode of the box.
         /// </summary>
+        /// <param name="networkMode">The network mode to set.</param>
         /// <exception cref="UnauthorizedException">The Login was not done before calling the method.</exception>
-        public Task SetNetworkModeAsync(NetworkMode networkMode)
+        public async Task SetNetworkModeAsync(NetworkMode networkMode)
         {
-            throw new NotImplementedException();
+            EnumHelpers.CastByName(networkMode, out Internal.Models.NetworkMode mode);
+            await SendRequestAsync<SystemSetNetMode, Internal.Models.Responses.SystemSetNetMode>(new SystemSetNetMode { NetworkMode = mode });
         }
 
         /// <summary>
