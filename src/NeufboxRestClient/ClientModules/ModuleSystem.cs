@@ -86,10 +86,11 @@ namespace NeufboxRestClient
         /// <summary>
         /// Set the client reference.
         /// </summary>
+        /// <param name="clientReference">The client reference.</param>
         /// <exception cref="UnauthorizedException">The Login was not done before calling the method.</exception>
-        public Task SetClientReferenceAsync(string clientReference)
+        public async Task SetClientReferenceAsync(string clientReference)
         {
-            throw new NotImplementedException();
+            await SendRequestAsync<SystemSetRefClient, Internal.Models.Responses.SystemSetRefClient>(new SystemSetRefClient { ClientReference = clientReference });
         }
     }
 }
