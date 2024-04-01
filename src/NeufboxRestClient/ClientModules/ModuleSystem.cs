@@ -40,9 +40,13 @@ namespace NeufboxRestClient
         /// </summary>
         /// <exception cref="UnauthorizedException">The Login was not done before calling the method.</exception>
         /// <returns>All network interfaces.</returns>
-        public Task<NetworkInterface[]> GetInterfaceListAsync()
+        public async Task<NetworkInterface[]> GetInterfaceListAsync()
         {
-            throw new NotImplementedException();
+            var response = await SendRequestAsync<SystemGetIfList, Internal.Models.Responses.SystemGetIfList>(new SystemGetIfList());
+            if (response.IsSuccess == false)
+                return null;
+
+            return response.Data.Interfaces;
         }
 
         /// <summary>
