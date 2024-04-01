@@ -3,7 +3,7 @@
 namespace NeufboxRestClient.Internal.Models.Requests
 {
     /// <summary>
-    /// system.getInfo request.
+    /// system.getWpaKey request.
     /// </summary>
     [ApiRequest(ApiMethod.System.GetWpaKey, HttpVerb.GET)]
     public class SystemGetWpaKey : AuthenticatedRequest

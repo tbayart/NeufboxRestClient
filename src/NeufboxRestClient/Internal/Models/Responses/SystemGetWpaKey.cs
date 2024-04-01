@@ -9,7 +9,7 @@ namespace NeufboxRestClient.Internal.Models.Responses
     public class SystemGetWpaKey
     {
         /// <summary>
-        /// The validated authentication token.
+        /// The current WPA key.
         /// </summary>
         [XmlAttribute("wpa_key")]
         public string WpaKey { get; set; }
