@@ -99,46 +99,4 @@ namespace NeufboxRestClient.Internal.Models.Responses
         [XmlAttribute("serial_number")]
         public string SerialNumber { get; set; }
     }
-
-    /// <summary>
-    /// The known network modes.
-    /// </summary>
-    public enum NetworkMode
-    {
-        /// <summary>
-        /// Box works in router mode.
-        /// </summary>
-        [XmlEnum("router")]
-        Router,
-
-        /// <summary>
-        /// Box works in bridge mode.
-        /// </summary>
-        [XmlEnum("bridge")]
-        Bridge,
-    }
-
-    /// <summary>
-    /// The known network infrastructures.
-    /// </summary>
-    public enum NetworkInfrastructure
-    {
-        /// <summary>
-        /// Infrastructure is ADSL.
-        /// </summary>
-        [XmlEnum("adsl")]
-        ADSL,
-
-        /// <summary>
-        /// Infrastructure is FTTH.
-        /// </summary>
-        [XmlEnum("ftth")]
-        FFTH,
-
-        /// <summary>
-        /// Infrastructure is GPRS.
-        /// </summary>
-        [XmlEnum("gprs")]
-        GPRS,
-    }
 }
