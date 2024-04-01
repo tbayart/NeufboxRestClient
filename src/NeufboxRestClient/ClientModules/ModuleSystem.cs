@@ -63,9 +63,9 @@ namespace NeufboxRestClient
         /// Reboot the box.
         /// </summary>
         /// <exception cref="UnauthorizedException">The Login was not done before calling the method.</exception>
-        public Task RebootAsync()
+        public async Task RebootAsync()
         {
-            throw new NotImplementedException();
+            await SendRequestAsync<SystemReboot, Internal.Models.Responses.SystemReboot>(new SystemReboot());
         }
 
         /// <summary>
