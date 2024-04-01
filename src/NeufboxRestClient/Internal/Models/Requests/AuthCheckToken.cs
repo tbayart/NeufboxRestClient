@@ -5,7 +5,7 @@ namespace NeufboxRestClient.Internal.Models.Requests
     /// <summary>
     /// auth.checkToken request.
     /// </summary>
-    [ApiRequest(ApiMethod.Auth.CheckToken, HttpVerb.GET, false)]
+    [ApiRequest(ApiMethod.Auth.CheckToken, HttpVerb.GET)]
     public class AuthCheckToken
     {
         /// <summary>

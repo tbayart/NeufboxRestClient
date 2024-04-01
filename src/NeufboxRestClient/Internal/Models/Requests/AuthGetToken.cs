@@ -5,7 +5,7 @@ namespace NeufboxRestClient.Internal.Models.Requests
     /// <summary>
     /// auth.getToken request.
     /// </summary>
-    [ApiRequest(ApiMethod.Auth.GetToken, HttpVerb.GET, false)]
+    [ApiRequest(ApiMethod.Auth.GetToken, HttpVerb.GET)]
     public class AuthGetToken
     {
     }
