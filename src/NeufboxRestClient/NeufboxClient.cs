@@ -77,6 +77,13 @@ namespace NeufboxRestClient
         #region methods
         private async Task<ApiResult<TResult>> SendRequestAsync<TRequest, TResult>(TRequest requestModel)
         {
+            if (requestModel is AuthenticatedRequest privateMethod)
+            {
+                if (string.IsNullOrEmpty(AuthToken))
+                    throw new UnauthorizedException();
+                privateMethod.Token = AuthToken;
+            }
+
             var handler = _requestMessageBuilder.Build(requestModel);
             var response = await _httpClient.SendAsync(handler);
             if (response.IsSuccessStatusCode)
